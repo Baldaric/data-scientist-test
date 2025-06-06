@@ -22,7 +22,7 @@ This repository contains the structure and setup for the data science take-home 
 ## Status
 
 - [x] Folder structure initialized
-- [ ] SQL analysis in progress
+- [x] SQL analysis in progress
 - [ ] Python modeling in progress
 - [ ] R validation in progress
 
