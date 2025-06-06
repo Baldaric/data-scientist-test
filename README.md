@@ -7,7 +7,7 @@ This repository contains the structure and setup for the data science take-home 
  - C. R Statistical Validation
 
 ## Folder Structure
-.
+```
 ├── data/
 │   ├── e_commerce_transactions.csv
 │   └── credit_scoring.csv
@@ -18,7 +18,7 @@ This repository contains the structure and setup for the data science take-home 
 ├── A_findings.md             # Anomali (max 150 kata)
 ├── C_summary.md              # Cut-off (max 100 kata)
 └── README.md                 # Cara run project
-
+```
 ## Status
 
 - [x] Folder structure initialized
