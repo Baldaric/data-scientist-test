@@ -21,3 +21,22 @@ SELECT
 		ELSE 'Other'
 	END AS segmentation
 FROM rfm;
+
+-- 3.1: Anomaly detection negative decoy_noise
+SELECT *
+FROM e_commerce_transactions
+WHERE decoy_noise < 0;
+
+-- 3.2: Anomaly detection based on decoy_noise
+SELECT *
+FROM e_commerce_transactions
+WHERE ABS(payment_value - decoy_noise) > 100;
+
+-- 3.3: Frequency of decoy_flag based on decoy_noise
+SELECT
+	decoy_flag,
+	COUNT(*) AS anomaly_count
+FROM e_commerce_transactions
+WHERE ABS (payment_value - decoy_noise) > 100
+GROUP BY decoy_flag
+ORDER BY anomaly_count DESC;
