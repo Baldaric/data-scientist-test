@@ -40,3 +40,14 @@ FROM e_commerce_transactions
 WHERE ABS (payment_value - decoy_noise) > 100
 GROUP BY decoy_flag
 ORDER BY anomaly_count DESC;
+
+-- 4: Monthly repeat-purchase
+EXPLAIN
+SELECT
+  customer_id,
+  DATE_TRUNC('month', order_date) AS purchase_month,
+  COUNT(*) AS purchase_count
+FROM e_commerce_transactions
+GROUP BY customer_id, purchase_month
+HAVING COUNT(*) >= 2
+ORDER BY customer_id, purchase_month;
