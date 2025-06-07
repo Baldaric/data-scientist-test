@@ -37,3 +37,18 @@ df_summary <- df %>%
     avg_pred = mean(predicted_proba),
     avg_actual = mean(actual)
   )
+
+# Plot calibration curves
+plot <- ggplot(df_summary, aes(x = avg_pred, y = avg_actual)) +
+  geom_point(size = 2) +                     # dots for each bin
+  geom_line() +                              # connect the dots
+  geom_abline(slope = 1, intercept = 0,      # ideal calibration line
+              linetype = "dashed", color = "gray") +
+  labs(
+    title = "Calibration Curve",
+    x = "Predicted Default Probability",
+    y = "Observed Default Rate"
+  )
+
+# Save the Plot
+ggsave("calibration_curve.png", plot = plot, width = 6, height = 4, dpi = 300)
