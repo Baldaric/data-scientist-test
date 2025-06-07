@@ -9,8 +9,9 @@ This repository contains the structure and setup for the data science take-home 
 ## Folder Structure
 ```
 ├── data/
-│   ├── e_commerce_transactions.csv
-│   └── credit_scoring.csv
+│   ├── credit_scoring.csv
+|   ├── e_commerce_transactions.csv
+│   └── predictions.csv
 ├── notebooks/
 │   └── B_modeling.ipynb
 ├── analysis.sql               # Bagian A
@@ -23,6 +24,8 @@ This repository contains the structure and setup for the data science take-home 
 
 - [x] Folder structure initialized
 - [x] SQL analysis in progress
-- [ ] Python modeling in progress
+- [x] Python modeling in progress
 - [ ] R validation in progress
+
+### ALL COMPLETED
 

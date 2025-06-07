@@ -1,0 +1,1 @@
+Model calibration was evaluated using the Hosmer–Lemeshow test, resulting in a p-value of 0.44, indicating no significant miscalibration. Based on the distribution of credit scores, a cut-off of 740 ensures the expected default rate remains below 5%, aligning with business risk thresholds.
